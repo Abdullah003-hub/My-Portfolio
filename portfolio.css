@@ -1,0 +1,521 @@
+/* filepath: c:\Users\B H\Desktop\vs\portfolio.css */
+:root {
+  --primary: #4f8cff;
+  --secondary: #ff6bcb;
+  --bg: #181c24;
+  --card-bg: #23283b;
+  --accent: #00e6d3;
+  --text: #f5f5f5;
+  --muted: #b0b8c1;
+  --shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.25);
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Roboto', Arial, sans-serif;
+  scroll-behavior: smooth;
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+
+.gradient-bg {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 0;
+  background: linear-gradient(120deg, #4f8cff 0%, #ff6bcb 100%);
+  opacity: 0.18;
+  animation: gradientMove 12s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+nav {
+  background: rgba(24,28,36,0.95);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.7rem 0;
+}
+
+.logo {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary);
+  letter-spacing: 2px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2.2rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 700;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1.08rem;
+  transition: color 0.2s;
+  position: relative;
+  padding: 0.2rem 0;
+}
+
+nav a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  transition: width 0.3s;
+  margin-top: 2px;
+}
+
+nav a:hover {
+  color: var(--accent);
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+header {
+  background: none;
+  padding-bottom: 0;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3.5rem 0 2rem 0;
+  position: relative;
+  z-index: 1;
+}
+
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid var(--accent);
+  margin-bottom: 1.2rem;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  background: #fff;
+  object-fit: cover;
+}
+
+.hero h1 {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 2.7rem;
+  margin: 0.2rem 0 0.5rem 0;
+  letter-spacing: 2px;
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: var(--text);
+  opacity: 0.92;
+  margin-bottom: 1.2rem;
+}
+
+.hero-links {
+  display: flex;
+  gap: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+.hero-links a img {
+  width: 32px;
+  height: 32px;
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.12));
+  transition: transform 0.2s;
+}
+
+.hero-links a:hover img {
+  transform: scale(1.18) rotate(-8deg);
+}
+
+main {
+  position: relative;
+  z-index: 1;
+}
+
+section {
+  margin-bottom: 3rem;
+  background: var(--card-bg);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  padding: 2.5rem 2rem;
+  transition: box-shadow 0.2s;
+}
+
+section:hover {
+  box-shadow: 0 12px 36px 0 rgba(31, 38, 135, 0.35);
+}
+
+h2 {
+  font-family: 'Montserrat', Arial, sans-serif;
+  color: var(--primary);
+  font-size: 2rem;
+  margin-bottom: 1.2rem;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+/* Education section color styling */
+.education {
+  margin-bottom: 3rem;
+}
+
+.education h2 {
+  color: #4f8cff;
+  font-size: 3rem;
+  font-family: 'Montserrat', Arial, sans-serif;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.education h2::after {
+  content: "";
+  display: block;
+  width: 90px;
+  height: 4px;
+  background: #4f8cff;
+  margin: 18px auto 0 auto;
+  border-radius: 2px;
+}
+
+.education-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.education-card {
+  position: relative;
+  background: #1a1e2d;
+  border-radius: 32px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+  padding: 2.5rem 2.5rem 2rem 2.5rem;
+  display: flex;
+  align-items: stretch;
+  min-height: 180px;
+  margin-bottom: 0.5rem;
+  border-left: 6px solid #4f8cff;
+}
+
+.edu-border {
+  display: block;
+  width: 12px;
+  border-radius: 0 20px 20px 0;
+  background: #4f8cff;
+  margin-right: 2rem;
+  min-height: 100%;
+}
+
+.edu-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.edu-title {
+  color: #4f8cff;
+  font-size: 2.2rem;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+
+.edu-degree {
+  color: #fff;
+  font-size: 1.35rem;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.edu-desc {
+  color: #b0b8c1;
+  font-size: 1.15rem;
+  font-family: 'Roboto', Arial, sans-serif;
+  font-weight: 400;
+}
+
+.about p {
+  font-size: 1.15rem;
+  color: var(--muted);
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* About Me section styling */
+.about-main {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.about h2 {
+  color: var(--primary);
+  font-size: 2.7rem;
+  margin-bottom: 1.5rem;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.about-main h3 {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 0.5rem;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 700;
+}
+
+.about-main h4 {
+  font-size: 1.4rem;
+  color: var(--primary);
+  margin-bottom: 1.2rem;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 600;
+}
+
+.about-main p {
+  font-size: 1.15rem;
+  color: var(--muted);
+  font-family: 'Roboto', Arial, sans-serif;
+  margin: 0 auto;
+  max-width: 700px;
+}
+
+/* Skills section two-column styling */
+.skills-flex {
+  display: flex;
+  gap: 2.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.skills-group {
+  background: #23283b;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(31, 38, 135, 0.12);
+  padding: 2rem 2.5rem;
+  min-width: 260px;
+  flex: 1 1 260px;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skills-heading {
+  color: var(--primary);
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  letter-spacing: 1px;
+}
+
+.skills-group ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.skills-group li {
+  background: linear-gradient(90deg, var(--primary) 60%, var(--secondary) 100%);
+  color: #fff;
+  padding: 0.7rem 1.5rem;
+  border-radius: 30px;
+  font-size: 1.05rem;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  text-align: center;
+  transition: transform 0.15s;
+}
+
+.skills-group li:hover {
+  transform: scale(1.08);
+  background: linear-gradient(90deg, var(--secondary) 0%, var(--primary) 100%);
+}
+
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  background: #fff;
+  color: #23283b;
+  border-radius: 14px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  padding: 1.5rem 1.2rem;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+  border-bottom: 4px solid var(--primary);
+}
+
+.project-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 8px 32px rgba(79,140,255,0.18);
+  border-bottom: 4px solid var(--secondary);
+}
+
+.project-card h3 {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1.3rem;
+  color: var(--primary);
+  margin-bottom: 0.7rem;
+}
+
+.project-card p {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 1rem;
+}
+
+.project-card a {
+  color: var(--secondary);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.project-card a:hover {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+.contact {
+  text-align: center;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.contact-links a {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  color: var(--primary);
+  font-size: 1.1rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.contact-links a:hover {
+  color: var(--secondary);
+}
+
+.contact-links img {
+  width: 28px;
+  height: 28px;
+}
+
+footer {
+  background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
+  color: #fff;
+  text-align: center;
+  padding: 1.2rem 0;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+  margin-top: 2rem;
+  box-shadow: 0 -2px 12px rgba(0,0,0,0.08);
+}
+
+@media (max-width: 700px) {
+  .container {
+    padding: 0 0.5rem;
+  }
+  section {
+    padding: 1.2rem 0.5rem;
+  }
+  .project-list {
+    grid-template-columns: 1fr;
+  }
+  nav ul {
+    gap: 1rem;
+  }
+  .profile-img {
+    width: 80px;
+    height: 80px;
+  }
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+  .education-card {
+    padding: 1.2rem 0.7rem;
+  }
+  .education h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .education-card {
+    flex-direction: column;
+    padding: 1.2rem 1rem 1.2rem 1rem;
+  }
+  .edu-border {
+    width: 100%;
+    height: 10px;
+    margin: 0 0 1rem 0;
+    border-radius: 0 0 20px 20px;
+  }
+  .skills-flex {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .skills-group {
+    width: 100%;
+    min-width: unset;
+    padding: 1.2rem 1rem;
+  }
+}
